@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perícias - AssistPericias</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">AssistPericias</div>
+      <div class="nav-links">
+        <a href="/">Início</a>
+        <a href="/pages/processos.html">Processos</a>
+        <a href="/pages/pericias.html" class="active">Perícias</a>
+        <a href="#" id="logout-btn">Sair</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Gerenciamento de Perícias</h1>
+    
+    <div class="card">
+      <div class="card-header">
+        <h2>Lista de Perícias</h2>
+        <button id="nova-pericia-btn" class="btn btn-primary">Nova 
+Perícia</button>
+      </div>
+      
+      <div class="filter-bar">
+        <input type="text" id="pericia-search" placeholder="Buscar por 
+paciente...">
+        <select id="pericia-filter">
+          <option value="todos">Todos os Status</option>
+          <option value="Agendada">Agendadas</option>
+          <option value="Realizada">Realizadas</option>
+          <option value="Cancelada">Canceladas</option>
+        </select>
+      </div>
+      
+      <table id="pericias-table">
+        <thead>
+          <tr>
+            <th>Paciente</th>
+            <th>Data/Hora</th>
+            <th>Local</th>
+            <th>Tipo</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dados carregados via JavaScript -->
+        </tbody>
+      </table>
+    </div>
+    
+    <div id="pericia-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title">Nova Perícia</h2>
+        
+        <form id="pericia-form">
+          <input type="hidden" id="pericia-id">
+          
+          <div class="form-group">
+            <label for="processoId">Processo</label>
+            <select id="processoId" required>
+              <!-- Opções carregadas via JavaScript -->
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="paciente">Paciente</label>
+            <input type="text" id="paciente" required>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="data">Data</label>
+              <input type="date" id="data" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="hora">Hora</label>
+              <input type="time" id="hora" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="local">Local</label>
+            <input type="text" id="local" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="tipo">Tipo</label>
+            <select id="tipo" required>
+              <option value="">Selecione</option>
+              <option value="Ortopédica">Ortopédica</option>
+              <option value="Psiquiátrica">Psiquiátrica</option>
+              <option value="Neurológica">Neurológica</option>
+              <option value="Cardiológica">Cardiológica</option>
+              <option value="Outra">Outra</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="status">Status</label>
+            <select id="status" required>
+              <option value="Agendada">Agendada</option>
+              <option value="Realizada">Realizada</option>
+              <option value="Cancelada">Cancelada</option>
+            </select>
+          </div>
+          
+          <div class="form-buttons">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <button type="button" class="btn btn-secondary" 
+id="cancel-btn">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/auth.js"></script>
+  <script src="/js/pericias.js"></script>
+</body>
+</html>

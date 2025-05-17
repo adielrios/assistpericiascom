@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "numeroProcesso": "0001234-56.2025.8.26.0100",
+    "tribunal": "tjsp",
+    "vara": "2ª Vara Cível",
+    "comarca": "São Paulo",
+    "autor": "Maria da Silva",
+    "reu": "Seguradora ABC",
+    "ultimaVerificacao": "2025-04-01T00:00:00.000Z",
+    "status": "Ativo"
+  },
+  {
+    "id": 2,
+    "numeroProcesso": "0002345-67.2025.5.02.0001",
+    "tribunal": "trt",
+    "vara": "5ª Vara do Trabalho",
+    "comarca": "São Paulo",
+    "reclamante": "João Oliveira",
+    "reclamada": "Empresa XYZ Ltda",
+    "ultimaVerificacao": "2025-04-01T00:00:00.000Z",
+    "status": "Ativo"
+  }
+]

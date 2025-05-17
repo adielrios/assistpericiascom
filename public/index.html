@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AssistPericias - Sistema de Gestão de Perícias Médicas</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">AssistPericias</div>
+      <div class="nav-links" id="nav-menu">
+        <a href="/" class="active">Início</a>
+        <a href="/pages/processos.html">Processos</a>
+        <a href="/pages/pericias.html">Perícias</a>
+        <a href="#" id="logout-btn">Sair</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div id="login-container" class="card">
+      <h2>Login</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="token">Token de Acesso</label>
+          <input type="text" id="token" placeholder="Digite seu token de 
+acesso" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </form>
+    </div>
+
+    <div id="dashboard" style="display: none;">
+      <h1>Painel de Controle</h1>
+      <div class="card">
+        <h3>Bem-vindo, <span id="user-name">Usuário</span></h3>
+        <p>Bem-vindo ao Sistema AssistPericias, sua ferramenta para 
+gerenciamento eficiente de perícias médicas.</p>
+      </div>
+      
+      <div class="card">
+        <h3>Resumo</h3>
+        <div class="dashboard-summary">
+          <div class="summary-item">
+            <h4>Processos Ativos</h4>
+            <p id="processos-ativos">0</p>
+          </div>
+          <div class="summary-item">
+            <h4>Perícias Agendadas</h4>
+            <p id="pericias-agendadas">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/main.js"></script></body>
+</html>

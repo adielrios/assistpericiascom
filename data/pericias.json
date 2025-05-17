@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "processoId": 1,
+    "paciente": "Maria da Silva",
+    "data": "2025-05-15",
+    "hora": "14:30",
+    "local": "Consultório - Av. Paulista, 1000",
+    "status": "Agendada",
+    "tipo": "Ortopédica"
+  },
+  {
+    "id": 2,
+    "processoId": 2,
+    "paciente": "João Oliveira",
+    "data": "2025-05-20",
+    "hora": "10:00",
+    "local": "Consultório - Av. Paulista, 1000",
+    "status": "Agendada",
+    "tipo": "Psiquiátrica"
+  }
+]

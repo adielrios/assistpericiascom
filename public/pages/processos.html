@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Processos - AssistPericias</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">AssistPericias</div>
+      <div class="nav-links">
+        <a href="/">Início</a>
+        <a href="/pages/processos.html" class="active">Processos</a>
+        <a href="/pages/pericias.html">Perícias</a>
+        <a href="#" id="logout-btn">Sair</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Gerenciamento de Processos</h1>
+    
+    <div class="card">
+      <div class="card-header">
+        <h2>Lista de Processos</h2>
+        <button id="novo-processo-btn" class="btn btn-primary">Novo 
+Processo</button>
+      </div>
+      
+      <div class="filter-bar">
+        <input type="text" id="processo-search" placeholder="Buscar por 
+número ou nome...">
+        <select id="processo-filter">
+          <option value="todos">Todos os Status</option>
+          <option value="Ativo">Ativos</option>
+          <option value="Concluído">Concluídos</option>
+          <option value="Arquivado">Arquivados</option>
+        </select>
+      </div>
+      
+      <table id="processos-table">
+        <thead>
+          <tr>
+            <th>Nº do Processo</th>
+            <th>Vara/Comarca</th>
+            <th>Autor/Reclamante</th>
+            <th>Réu/Reclamada</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dados carregados via JavaScript -->
+        </tbody>
+      </table>
+    </div>
+    
+    <div id="processo-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title">Novo Processo</h2>
+        
+        <form id="processo-form">
+          <input type="hidden" id="processo-id">
+          
+          <div class="form-group">
+            <label for="numeroProcesso">Número do Processo</label>
+            <input type="text" id="numeroProcesso" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="tribunal">Tribunal</label>
+            <select id="tribunal" required>
+              <option value="">Selecione</option>
+              <option value="tjsp">TJSP</option>
+              <option value="tjrj">TJRJ</option>
+              <option value="trt">TRT</option>
+              <option value="trf">TRF</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="vara">Vara</label>
+              <input type="text" id="vara" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="comarca">Comarca</label>
+              <input type="text" id="comarca" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="autor">Autor/Reclamante</label>
+            <input type="text" id="autor" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="reu">Réu/Reclamada</label>
+            <input type="text" id="reu" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="status">Status</label>
+            <select id="status" required>
+              <option value="Ativo">Ativo</option>
+              <option value="Concluído">Concluído</option>
+              <option value="Arquivado">Arquivado</option>
+            </select>
+          </div>
+          
+          <div class="form-buttons">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <button type="button" class="btn btn-secondary" 
+id="cancel-btn">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/auth.js"></script>
+  <script src="/js/processos.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "user": {
+    "id": 1,
+    "nome": "Dr. Adiel Carneiro Rios",
+    "email": "adiel@assistpericias.com.br",
+    "role": "admin"
+  },
+  "expiresAt": 4070908800000
+}

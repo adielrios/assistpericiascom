@@ -1,0 +1,7 @@
+.env
+*.log
+data/postgres/
+data/redis/
+certificates/private/
+*.pem
+*.key

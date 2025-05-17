@@ -1,0 +1,33 @@
+{
+  "nome": "AssistPericias",
+  "versao": "2.0.0",
+  "dominio": "assistpericias.com.br",
+  "email": {
+    "host": "smtp.assistpericias.com.br",
+    "port": 587,
+    "secure": false,
+    "auth": {
+      "user": "no-reply@assistpericias.com.br",
+      "pass": "senha_email_aqui"
+    }
+  },
+  "assistenteVirtual": {
+    "nome": "Oscar",
+    "ativo": true,
+    "mensagemBemVindo": "Olá, sou Oscar, seu assistente virtual! Como posso ajudar hoje?"
+  },
+  "configuracaoBackup": {
+    "intervalo": "diario",
+    "horario": "01:00",
+    "manterUltimos": 7
+  },
+  "monitoramento": {
+    "intervaloVerificacao": 300,
+    "alertaEmail": "adiel@assistpericias.com.br",
+    "limites": {
+      "cpu": 80,
+      "memoria": 80,
+      "disco": 90
+    }
+  }
+}
